@@ -13,7 +13,7 @@ import os
 from random import randint
 from time import sleep, time
 
-adb_path = './adb'
+adb_path = 'adb'
 total_page = 320  # 阅读页数：300 页
 total_time = 31  # 阅读时间：30 分钟
 
@@ -55,7 +55,8 @@ def main():
     sleep(3)
     os.system(f"{adb_path} shell input tap 90 100")  # 点击活动中心（+-10）
     sleep(8)
-    os.system(f"{adb_path} shell input tap 350 1100")  # 点击口袋阅打卡（y：960-1240）
+    # os.system(f"{adb_path} shell input tap 350 1100")  # 点击口袋阅打卡-旧（y：960-1240）
+    os.system(f"{adb_path} shell input tap 350 360")  # 点击口袋阅打卡（y：960-1240）
     sleep(8)
     os.system(f"{adb_path} shell input tap 354 1130")  # 点击口袋阅打卡-打卡（y：1090-1180）
     sleep(6)
